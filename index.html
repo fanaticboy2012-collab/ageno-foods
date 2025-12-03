@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Ageno Foods - authentic homemade pickles and sauces from Nepal. Handcrafted recipes, natural ingredients, and local delivery options."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ageno Foods - Authentic Homemade Pickles & Sauces</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER/NAVIGATION -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="index.html" class="logo-link">
+              <img
+                src="images/icons/ageno-foods-logo.png"
+                alt="Ageno Foods logo"
+                class="logo-img"
+                onerror="this.style.display='none'"
+              />
+              <span class="logo-text">Ageno Foods</span>
+            </a>
+          </div>
+          <ul class="nav-menu">
+            <li>
+              <a href="index.html" class="nav-link active">Home</a>
+            </li>
+            <li>
+              <a href="#products" class="nav-link">Products</a>
+            </li>
+            <li>
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li>
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+          <div class="nav-icons">
+            <button
+              class="search-toggle-btn"
+              aria-label="Toggle search"
+              aria-expanded="false"
+              hidden
+            >
+              🔍
+            </button>
+            <form class="search-form" role="search">
+              <label for="site-search" class="sr-only">Search products</label>
+              <div class="search-input-wrapper">
+                <input
+                  id="site-search"
+                  class="search-input"
+                  type="search"
+                  placeholder="Search products..."
+                  aria-label="Search products"
+                />
+                <span class="search-icon-inside">🔍</span>
+                <button
+                  type="button"
+                  class="search-clear-btn"
+                  aria-label="Clear search"
+                  hidden
+                >
+                  ✖
+                </button>
+              </div>
+            </form>
+          </div>
+          <div id="search-no-results" class="search-no-results" hidden>
+            <p>No products found. Please try a different search.</p>
+          </div>
+          <div class="hamburger" aria-label="Toggle navigation" role="button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-home">
+      <div class="hero-overlay">
+        <div class="container">
+          <div class="hero-content-home">
+            <h1>Welcome to Ageno Foods</h1>
+            <p class="hero-subtitle">Authentic Homemade Pickles & Sauces</p>
+            <p class="hero-text">
+              Crafted with love, tradition, and the finest ingredients.
+              Experience the taste of home in every jar.
+            </p>
+            <div class="hero-buttons">
+              <a href="#products" class="btn btn-primary-home">Shop Now</a>
+              <a href="#about" class="btn btn-secondary-home">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon">🌿</div>
+            <h3>100% Natural</h3>
+            <p>No artificial preservatives or colors</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">👨‍🍳</div>
+            <h3>Handcrafted</h3>
+            <p>Traditional recipes passed through generations</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🚚</div>
+            <h3>Free Delivery</h3>
+            <p>On orders above NPR 1000</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">⭐</div>
+            <h3>Premium Quality</h3>
+            <p>Carefully selected ingredients</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="products-section" id="products">
+      <div class="container">
+        <h2 class="section-title">Our Products</h2>
+        <p class="section-subtitle">
+          Discover our range of authentic pickles and sauces
+        </p>
+
+        <!-- Product Categories -->
+        <div class="category-filter">
+          <button class="filter-btn active" data-category="all">
+            All Products
+          </button>
+          <button class="filter-btn" data-category="pickles">Pickles</button>
+          <button class="filter-btn" data-category="sauces">Sauces</button>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid-home">
+          <!-- Product 1: Mango Pickle -->
+          <div class="product-card-home" data-category="pickles">
+            <div class="product-badge">Bestseller</div>
+            <div class="product-image-home">
+              <img
+                src="images/products/mango.jpg"
+                alt="Traditional Mango Pickle in glass jar"
+              />
+              <div class="product-overlay">
+                <a href="products.html?id=mango" class="btn-quick-view"
+                  >View Details</a
+                >
+              </div>
+            </div>
+            <div class="product-info-home">
+              <h3>Traditional Mango Pickle</h3>
+              <div class="product-rating-home">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span class="rating-count">(124)</span>
+              </div>
+              <p class="product-desc">
+                Authentic homemade mango pickle with aromatic spices
+              </p>
+              <div class="product-price-home">
+                <span class="price-current">NPR 499</span>
+                <span class="price-old">NPR 599</span>
+              </div>
+              <a href="products.html?id=mango" class="btn-add-cart">
+                View Details
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 2: Radish Pickle -->
+          <div class="product-card-home" data-category="pickles">
+            <div class="product-image-home">
+              <img src="images/products/radish.jpg" alt="Radish Pickle jar" />
+              <div class="product-overlay">
+                <a href="products.html?id=radish" class="btn-quick-view"
+                  >View Details</a
+                >
+              </div>
+            </div>
+            <div class="product-info-home">
+              <h3>Radish Pickle</h3>
+              <div class="product-rating-home">
+                <span class="stars">⭐⭐⭐⭐☆</span>
+                <span class="rating-count">(48)</span>
+              </div>
+              <p class="product-desc">
+                Crisp and tangy radish pickle made with traditional spices.
+              </p>
+              <div class="product-price-home">
+                <span class="price-current">NPR 249</span>
+              </div>
+              <a href="products.html?id=radish" class="btn-add-cart">
+                View Details
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 3: Szechuan Sauce -->
+          <div class="product-card-home" data-category="sauces">
+            <div class="product-badge hot">Hot</div>
+            <div class="product-image-home">
+              <img src="images/products/szehuan.jpg" alt="Szechuan Sauce jar" />
+              <div class="product-overlay">
+                <a href="products.html?id=szechuan" class="btn-quick-view"
+                  >View Details</a
+                >
+              </div>
+            </div>
+            <div class="product-info-home">
+              <h3>Szechuan Sauce</h3>
+              <div class="product-rating-home">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span class="rating-count">(89)</span>
+              </div>
+              <p class="product-desc">
+                Spicy and tangy Szechuan sauce with authentic Chinese flavors
+              </p>
+              <div class="product-price-home">
+                <span class="price-current">NPR 399</span>
+              </div>
+              <a href="products.html?id=szechuan" class="btn-add-cart">
+                View Details
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 4: Akbare Sauce -->
+          <div class="product-card-home" data-category="sauces">
+            <div class="product-badge new">New</div>
+            <div class="product-image-home">
+              <img
+                src="images/products/akbare.jpg"
+                alt="Round Chilli Sauce bottle"
+              />
+              <div class="product-overlay">
+                <a href="products.html?id=akbare" class="btn-quick-view"
+                  >View Details</a
+                >
+              </div>
+            </div>
+            <div class="product-info-home">
+              <h3>Round Chilli Sauce</h3>
+              <div class="product-rating-home">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span class="rating-count">(67)</span>
+              </div>
+              <p class="product-desc">
+                Perfectly balanced chilli sauce with a unique round flavor
+              </p>
+              <div class="product-price-home">
+                <span class="price-current">NPR 349</span>
+              </div>
+              <a href="products.html?id=akbare" class="btn-add-cart">
+                View Details
+              </a>
+            </div>
+          </div>
+
+          <!-- Product 5: Timbur Pepper -->
+          <div class="product-card-home" data-category="sauces">
+            <div class="product-image-home">
+              <img
+                src="images/products/timbur.jpg"
+                alt="Dried Sichuan Pepper"
+              />
+              <div class="product-overlay">
+                <a href="products.html?id=timbur" class="btn-quick-view"
+                  >View Details</a
+                >
+              </div>
+            </div>
+            <div class="product-info-home">
+              <h3>Timbur (Sichuan Pepper)</h3>
+              <div class="product-rating-home">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <span class="rating-count">(95)</span>
+              </div>
+              <p class="product-desc">
+                Premium quality dried Sichuan pepper for authentic spice
+              </p>
+              <div class="product-price-home">
+                <span class="price-current">NPR 299</span>
+              </div>
+              <a href="products.html?id=timbur" class="btn-add-cart">
+                View Details
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-home" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image">
+            <img
+              src="https://via.placeholder.com/600x500/2d6a4f/ffffff?text=Our+Story"
+              alt="About Ageno Foods"
+            />
+          </div>
+          <div class="about-content-home">
+            <h2>Our Story</h2>
+            <p>
+              Ageno Foods was born from a passion for preserving traditional
+              recipes and flavors that have been passed down through
+              generations. We believe that food is not just sustenance, but a
+              connection to our roots, culture, and memories.
+            </p>
+            <p>
+              Every jar of pickle and bottle of sauce we create is made with
+              handpicked ingredients, traditional techniques, and lots of love.
+              We take pride in using no artificial preservatives, ensuring you
+              get the authentic taste of homemade goodness.
+            </p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <h3>5+</h3>
+                <p>Products</p>
+              </div>
+              <div class="stat-item">
+                <h3>1000+</h3>
+                <p>Happy Customers</p>
+              </div>
+              <div class="stat-item">
+                <h3>100%</h3>
+                <p>Natural</p>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary-home">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">
+              "The mango pickle tastes exactly like my grandmother used to make!
+              Absolutely authentic and delicious. Highly recommended!"
+            </p>
+            <div class="testimonial-author">
+              <strong>Priya Sharma</strong>
+              <span>Kathmandu</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">
+              "Love the Szechuan sauce! Perfect spice level and great with
+              everything. The quality is outstanding and packaging is
+              excellent."
+            </p>
+            <div class="testimonial-author">
+              <strong>Rajesh Kumar</strong>
+              <span>Pokhara</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">
+              "Finally found authentic homemade pickles in Nepal! No
+              preservatives, just pure traditional taste. Will definitely order
+              again."
+            </p>
+            <div class="testimonial-author">
+              <strong>Anita Patel</strong>
+              <span>Lalitpur</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter-content">
+          <h2>Stay Updated</h2>
+          <p>
+            Subscribe to our newsletter for exclusive offers and new product
+            launches
+          </p>
+          <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit" class="btn btn-primary-home">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-home" id="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div>
+                <strong>Address</strong>
+                <p>Kathmandu, Nepal</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📧</span>
+              <div>
+                <strong>Email</strong>
+                <p>info@agenofoods.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📱</span>
+              <div>
+                <strong>Phone</strong>
+                <p>+977-XXX-XXXXXX</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">⏰</span>
+              <div>
+                <strong>Working Hours</strong>
+                <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-home">
+            <form onsubmit="submitContactForm(event)">
+              <div class="form-row">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+              </div>
+              <input type="text" placeholder="Subject" required />
+              <textarea rows="5" placeholder="Your Message" required></textarea>
+              <button type="submit" class="btn btn-primary-home">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Ageno Foods</h3>
+            <p>
+              Authentic homemade pickles and sauces crafted with love and
+              tradition.
+            </p>
+            <div class="social-icons">
+              <a href="#" title="Facebook">📘</a>
+              <a href="#" title="Instagram">📷</a>
+              <a href="#" title="Twitter">🐦</a>
+              <a href="#" title="YouTube">📺</a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Customer Service</h4>
+            <ul>
+              <li><a href="#shipping">Shipping Info</a></li>
+              <li><a href="#returns">Returns & Exchange</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#track">Track Order</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#privacy">Privacy Policy</a></li>
+              <li><a href="#terms">Terms & Conditions</a></li>
+              <li><a href="#refund">Refund Policy</a></li>
+              <li><a href="#cookies">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Ageno Foods. All rights reserved. Made with ❤️ in Nepal
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
