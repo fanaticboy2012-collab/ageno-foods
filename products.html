@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product - Ageno Foods</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="index.html" class="logo-link"
+              ><img
+                src="images/icons/ageno-foods-logo.png"
+                alt="Ageno Foods logo"
+                class="logo-img"
+              /><span class="logo-text">Ageno Foods</span></a
+            >
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li>
+              <a href="products.html" class="nav-link active">Products</a>
+            </li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container" id="breadcrumb">
+        Home / Products / <span id="bc-name">Product</span>
+      </div>
+    </div>
+
+    <section class="product-section">
+      <div class="container">
+        <div class="product-container" id="product-root">
+          <!-- JS will render product here -->
+          <p>Loading product...</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>&copy; 2024 Ageno Foods. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Helper: read query param
+      function getQueryParam(name) {
+        const params = new URLSearchParams(location.search);
+        return params.get(name);
+      }
+
+      function renderProduct(product) {
+        const root = document.getElementById("product-root");
+        const bcName = document.getElementById("bc-name");
+        bcName.textContent = product.name;
+        document.title = product.name + " - Ageno Foods";
+
+        // JSON-LD structured data
+        const ld = document.createElement("script");
+        ld.type = "application/ld+json";
+        ld.text = JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: product.name,
+          image: [product.image],
+          description: product.description,
+          sku: product.sku,
+          offers: {
+            "@type": "Offer",
+            price: product.price.toString(),
+            priceCurrency: product.currency,
+            availability: "https://schema.org/InStock",
+          },
+        });
+        document.head.appendChild(ld);
+
+        // Build DOM
+        root.innerHTML = `
+          <div class="product-images">
+            <div class="main-image"><img src="${product.image}" alt="${
+          product.name
+        }" id="mainImage"/></div>
+            <div class="thumbnail-images">
+              <img src="${product.image}" class="thumbnail active" alt="${
+          product.name
+        } thumb"/>
+            </div>
+          </div>
+          <div class="product-info">
+            <h1 class="product-title">${product.name}</h1>
+            <div class="product-rating"><span class="stars">⭐⭐⭐⭐⭐</span><span class="rating-text">(${
+              product.currency
+            } ${product.price})</span></div>
+            <div class="product-price"><span class="current-price">${
+              product.currency
+            } ${product.price}</span></div>
+            <p class="product-description">${product.description}</p>
+            <div class="product-options"><label>Select Size:</label><div class="size-options">${product.sizes
+              .map(
+                (s) =>
+                  `<button class="size-btn" data-price="${s.price}">${s.label} - ${product.currency} ${s.price}</button>`
+              )
+              .join("")}</div></div>
+            <div class="cart-buttons"><a href="index.html#contact" class="btn btn-buy">Contact Us to Order</a></div>
+          </div>
+        `;
+
+        // add click handlers for size buttons
+        document.querySelectorAll(".size-btn").forEach((btn) =>
+          btn.addEventListener("click", (e) => {
+            document
+              .querySelectorAll(".size-btn")
+              .forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+          })
+        );
+      }
+
+      (async function () {
+        const id = getQueryParam("id");
+        if (!id) {
+          document.getElementById("product-root").innerHTML =
+            "<p>No product specified.</p>";
+          return;
+        }
+        try {
+          const res = await fetch("data/products.json");
+          const data = await res.json();
+          const product = data.products.find((p) => p.id === id);
+          if (!product) {
+            document.getElementById("product-root").innerHTML =
+              "<p>Product not found.</p>";
+            return;
+          }
+          renderProduct(product);
+        } catch (err) {
+          document.getElementById("product-root").innerHTML =
+            "<p>Error loading product.</p>";
+          console.error(err);
+        }
+      })();
+    </script>
+  </body>
+</html>
