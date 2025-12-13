@@ -32,6 +32,10 @@
   /* Veg / Non-Veg Colors */
   --veg-color: #008000;
   --nonveg-color: #b22222;
+
+  /* Btn */
+  --whatsapp-green: #25d366;
+  --call-blue: #2878d8;
 }
 
 body {
@@ -236,12 +240,12 @@ h6 {
 }
 
 .btn-primary1 {
-  background-color: green;
+  background-color: var(--whatsapp-green);
   color: var(--white);
 }
 
 .btn-secondary1 {
-  background-color: rgb(40, 40, 216);
+  background-color: var(--call-blue);
   color: var(--white);
 }
 
