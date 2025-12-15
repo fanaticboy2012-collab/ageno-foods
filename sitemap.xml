@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://agenofoods.com/</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://agenofoods.com/images/icons/ageno-foods-logo.png</image:loc>
+      <image:title>Ageno Foods Logo</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Meat Achar Category Page -->
+  <url>
+    <loc>https://agenofoods.com/meat-achar.html</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://agenofoods.com/images/products/ChickenPickle.JPG</image:loc>
+      <image:title>Chicken Achar - Meat Pickles</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Veg Achar Category Page -->
+  <url>
+    <loc>https://agenofoods.com/veg-achar.html</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://agenofoods.com/images/products/VegCP.JPG</image:loc>
+      <image:title>Vegetable Achar - Veg Pickles</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Individual Products (if you create product detail pages) -->
+  <url>
+    <loc>https://agenofoods.com/products/mango-achar.html</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://agenofoods.com/images/products/MangoPickle.JPG</image:loc>
+      <image:title>Mango Achar - Traditional Nepali Mango Pickle</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://agenofoods.com/products/chicken-achar.html</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://agenofoods.com/images/products/ChickenPickle.JPG</image:loc>
+      <image:title>Chicken Achar - Premium Meat Pickle</image:title>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://agenofoods.com/products/radish-pickle.html</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://agenofoods.com/images/products/RadishPickle.JPG</image:loc>
+      <image:title>Radish Pickle - Mula Ko Achar</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Policy Pages (create these if they don't exist) -->
+  <url>
+    <loc>https://agenofoods.com/privacy-policy.html</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://agenofoods.com/terms.html</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://agenofoods.com/refund-policy.html</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- About Page (if separate) -->
+  <url>
+    <loc>https://agenofoods.com/index.html#about</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

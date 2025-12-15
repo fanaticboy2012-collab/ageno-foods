@@ -1,0 +1,43 @@
+# robots.txt for Ageno Foods (agenofoods.com)
+
+# Allow all bots to crawl everything
+User-agent: *
+Allow: /
+
+# Disallow specific directories if any (examples)
+# Disallow: /admin/
+# Disallow: /temp/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://agenofoods.com/sitemap.xml
+
+# Crawl-delay (optional - only if you want to slow down bots)
+# Crawl-delay: 10
+
+# Specific rules for Google bot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Block common bad bots (optional)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /

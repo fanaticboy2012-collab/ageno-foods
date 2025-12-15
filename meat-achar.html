@@ -2,21 +2,105 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meat Achar | Ghar Ko Achar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Meat Achar & Non-Veg Pickles | Chicken, Buff, Fish Achar - Ageno Foods</title>
     <meta
       name="description"
-      content="Premium Meat Pickles - Chicken, Mutton Sukuti, Fish Achar"
+      content="Order premium meat pickles (non-veg achar) in Kathmandu - Chicken Achar, Buff Pickle, Dry Fish Sidra. Authentic Nepali spices, traditional recipes. ✓ Organic ✓ Preservative-free ✓ Fast delivery"
     />
+    <meta 
+      name="keywords" 
+      content="meat achar Nepal, chicken pickle Kathmandu, buff achar, fish pickle Nepal, non-veg achar, sidra ko achar, mutton pickle, authentic meat pickles, organic meat achar, Nepali chicken pickle"
+    />
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://wa.me">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://agenofoods.com/meat-achar.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://agenofoods.com/meat-achar.html">
+    <meta property="og:title" content="Meat Achar & Non-Veg Pickles | Ageno Foods">
+    <meta property="og:description" content="Premium meat pickles - Chicken, Buff, Fish Achar with authentic Nepali spices">
+    <meta property="og:image" content="https://agenofoods.com/images/products/ChickenPickle.JPG">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Meat Achar & Non-Veg Pickles - Ageno Foods">
+    <meta name="twitter:description" content="Premium Chicken, Buff, Fish pickles with authentic Nepali spices">
+    <meta name="twitter:image" content="https://agenofoods.com/images/products/ChickenPickle.JPG">
+    
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Fonts -->
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" 
+      rel="stylesheet"
+      media="print" 
+      onload="this.media='all'"
+    >
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/whatsapp-button.css" />
+    
+    <!-- Structured Data - Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://agenofoods.com"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Meat Achar",
+        "item": "https://agenofoods.com/meat-achar.html"
+      }]
+    }
+    </script>
+    
+    <!-- Structured Data - Collection Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Meat Achars & Non-Veg Pickles",
+      "description": "Premium quality meat pickles made with authentic Nepali spices",
+      "url": "https://agenofoods.com/meat-achar.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Ageno Foods",
+        "url": "https://agenofoods.com"
+      }
+    }
+    </script>
   </head>
   <body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Header -->
-    <header class="header">
+    <header class="header" role="banner">
       <div class="container">
         <div class="header-content">
-          <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <button 
+            class="mobile-menu-btn" 
+            id="mobileMenuBtn"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
             <svg
               width="24"
               height="24"
@@ -24,6 +108,7 @@
               fill="none"
               stroke="currentColor"
               stroke-width="2"
+              aria-hidden="true"
             >
               <line x1="3" y1="12" x2="21" y2="12"></line>
               <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -32,18 +117,18 @@
           </button>
 
           <h1 class="logo" onclick="window.location.href='index.html'">
-            Achar Store
+            <span class="sr-only">Ageno Foods - </span>Achar Store
           </h1>
 
-          <nav class="main-nav">
+          <nav class="main-nav" aria-label="Main navigation">
             <a href="index.html#shop" class="nav-link">Shop</a>
-            <a href="meat-achar.html" class="nav-link active">Meat Achar</a>
+            <a href="meat-achar.html" class="nav-link active" aria-current="page">Meat Achar</a>
             <a href="veg-achar.html" class="nav-link">Veg Achar</a>
             <a href="index.html#about" class="nav-link">About Us</a>
           </nav>
 
           <div class="header-contact">
-            <a href="tel:9818494899" class="contact-btn">
+            <a href="tel:+9779761285450" class="contact-btn" aria-label="Call us at 976-1285450">
               <svg
                 width="20"
                 height="20"
@@ -51,6 +136,7 @@
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
+                aria-hidden="true"
               >
                 <path
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
@@ -64,9 +150,13 @@
     </header>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
       <div class="mobile-menu-content">
-        <button class="close-btn" id="closeMobileMenu">
+        <button 
+          class="close-btn" 
+          id="closeMobileMenu"
+          aria-label="Close navigation menu"
+        >
           <svg
             width="24"
             height="24"
@@ -74,12 +164,13 @@
             fill="none"
             stroke="currentColor"
             stroke-width="2"
+            aria-hidden="true"
           >
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
-        <nav class="mobile-nav">
+        <nav class="mobile-nav" aria-label="Mobile navigation">
           <a href="index.html#shop" class="mobile-nav-link">Shop</a>
           <a href="meat-achar.html" class="mobile-nav-link">Meat Achar</a>
           <a href="veg-achar.html" class="mobile-nav-link">Veg Achar</a>
@@ -88,36 +179,40 @@
       </div>
     </div>
 
-    <!-- Page Header -->
-    <section class="page-header">
-      <div class="container">
-        <h1 class="page-title">Meat Achars</h1>
-        <p class="page-subtitle">
-          Premium quality meat pickles made with authentic Nepali spices
-        </p>
-      </div>
-    </section>
-
-    <!-- Breadcrumb -->
-    <section class="breadcrumb">
-      <div class="container">
-        <a href="index.html">Home</a>
-        <span class="separator">›</span>
-        <span class="current">Meat Achar</span>
-      </div>
-    </section>
-
-    <!-- Products Section -->
-    <section class="products-section">
-      <div class="container">
-        <div class="products-grid" id="productsGrid">
-          <!-- Products will be loaded here by JavaScript -->
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Page Header -->
+      <section class="page-header" aria-labelledby="page-title">
+        <div class="container">
+          <h1 id="page-title" class="page-title">Meat Achars</h1>
+          <p class="page-subtitle">
+            Premium quality meat pickles made with authentic Nepali spices and traditional recipes
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+          <a href="index.html">Home</a>
+          <span class="separator" aria-hidden="true">›</span>
+          <span class="current" aria-current="page">Meat Achar</span>
+        </div>
+      </nav>
+
+      <!-- Products Section -->
+      <section class="products-section" aria-labelledby="products-heading">
+        <div class="container">
+          <h2 id="products-heading" class="sr-only">Available Meat Pickles</h2>
+          <div class="products-grid" id="productsGrid" role="list">
+            <!-- Products will be loaded here by JavaScript -->
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
@@ -140,9 +235,9 @@
           <div class="footer-col">
             <h4>Information</h4>
             <ul>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="#">Refund Policy</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms & Conditions</a></li>
+              <li><a href="refund-policy.html">Refund Policy</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -150,78 +245,83 @@
             <div class="contact-info">
               <p><strong>Head Office</strong></p>
               <p>Budhanilkantha-10, Kathmandu</p>
-              <p>📞 <a href="tel:9761285450">976-1285450</a></p>
+              <p>📞 <a href="tel:+9779761285450">976-1285450</a></p>
+              <p>✉️ <a href="mailto:info@agenofoods.com">info@agenofoods.com</a></p>
             </div>
-          </div>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>© 2025 Ageno Foods. All Rights Reserved.</p>
+          <p>&copy; 2025 Ageno Foods. All Rights Reserved.</p>
           <p>Made with ❤️ in Nepal</p>
         </div>
       </div>
     </footer>
 
     <!-- Contact Modal -->
-<div class="modal" id="contactModal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h2>Order Now</h2>
-      <button class="close-btn" id="closeContactModal">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-    </div>
-    <div class="modal-body">
-      <div class="contact-options">
-        <h3>Contact us to place your order:</h3>
-
-        <div class="contact-option-card">
-          <!-- WhatsApp Button -->
-          <a href="https://wa.me/9779761285450?text=Hello!%20I%20would%20like%20to%20place%20an%20order" 
-            target="_blank" 
-            class="btn btn-primary1">
+    <div 
+      class="modal" 
+      id="contactModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalTitle">Order Now</h2>
+          <button 
+            class="close-btn" 
+            id="closeContactModal"
+            aria-label="Close order modal"
+          >
             <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
-            Chat on WhatsApp
-          </a>
-          
-          <!-- Optional: Keep phone call option -->
-          <a href="tel:9761285450" class="btn btn-secondary1" style="margin-top: 10px;">
-            <svg
-              width="20"
-              height="20"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-width="2"
+              aria-hidden="true"
             >
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-              ></path>
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
-            Or Call 976-1285450
-          </a>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="contact-options">
+            <h3>Contact us to place your order:</h3>
+
+            <div class="contact-option-card">
+              <a 
+                href="https://wa.me/9779761285450?text=Hello!%20I%20would%20like%20to%20order%20meat%20achar" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="btn btn-primary1"
+                aria-label="Chat on WhatsApp"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Chat on WhatsApp
+              </a>
+              
+              <a 
+                href="tel:+9779761285450" 
+                class="btn btn-secondary1" 
+                style="margin-top: 10px;"
+                aria-label="Call 976-1285450"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                Or Call 976-1285450
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
     <!-- Scripts -->
     <script src="js/data.js"></script>
