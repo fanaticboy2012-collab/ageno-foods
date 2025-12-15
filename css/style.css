@@ -784,3 +784,376 @@ h6 {
 html {
   scroll-behavior: smooth;
 }
+
+/* ============================================
+   ADDITIONAL CSS FIXES - ADD TO style.css
+   ============================================ */
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+
+/* Focus Visible Styles - for keyboard navigation */
+*:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Remove default outline when not using keyboard */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Specific focus styles for buttons */
+.btn:focus-visible,
+.contact-btn:focus-visible,
+.order-now-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Mobile menu button focus */
+.mobile-menu-btn:focus-visible,
+.close-btn:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+  background-color: rgba(229, 57, 53, 0.1);
+}
+
+/* Link focus styles */
+a:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  text-decoration: underline;
+}
+
+/* ===== COLOR CONTRAST FIXES ===== */
+
+/* Footer text - improved contrast */
+.footer-text {
+  color: #d1d5db; /* Changed from #9ca3af for better contrast ratio */
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Footer links - improved contrast */
+.footer-col ul li a {
+  color: #d1d5db; /* Changed from #9ca3af */
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: var(--white);
+}
+
+/* Contact info - improved contrast */
+.contact-info {
+  margin-bottom: 1.5rem;
+  color: #d1d5db; /* Changed from #9ca3af */
+  font-size: 0.875rem;
+}
+
+/* ===== LOADING & PERFORMANCE ===== */
+
+/* Smooth transitions for lazy-loaded images */
+img[loading="lazy"] {
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Prevent layout shift with aspect ratio */
+.product-image {
+  aspect-ratio: 280 / 256;
+  object-fit: cover;
+  background-color: var(--bg-gray);
+}
+
+.category-card img {
+  aspect-ratio: 300 / 256;
+  object-fit: cover;
+  background-color: var(--bg-gray);
+}
+
+/* ===== TOUCH TARGET IMPROVEMENTS ===== */
+
+/* Ensure minimum 48x48px touch targets for mobile */
+.mobile-menu-btn,
+.close-btn {
+  min-width: 48px;
+  min-height: 48px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link,
+.mobile-nav-link {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+/* WhatsApp button touch target */
+.whatsapp-button {
+  min-width: 60px;
+  min-height: 60px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ===== SKIP LINK FOR ACCESSIBILITY ===== */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 100;
+  border-radius: 0 0 4px 0;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ===== SCREEN READER ONLY TEXT ===== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ===== ERROR & EMPTY STATE MESSAGES ===== */
+
+.error-message,
+.empty-message {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-gray);
+  font-size: 1.125rem;
+  grid-column: 1 / -1;
+}
+
+.error-message {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 0.5rem;
+  color: #991b1b;
+}
+
+.empty-message {
+  background-color: var(--bg-gray);
+  border: 1px dashed var(--border-color);
+  border-radius: 0.5rem;
+}
+
+/* ===== SMOOTH SCROLL BEHAVIOR ===== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== MODAL ACCESSIBILITY ===== */
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Modal backdrop */
+.modal {
+  backdrop-filter: blur(2px);
+}
+
+/* Modal animation */
+.modal.active .modal-content {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===== IMPROVED BUTTON STATES ===== */
+
+/* Disabled button state */
+.btn:disabled,
+.order-now-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Active/pressed state */
+.btn:active,
+.order-now-btn:active {
+  transform: scale(0.98);
+}
+
+/* ===== HIGH CONTRAST MODE SUPPORT ===== */
+
+@media (prefers-contrast: high) {
+  .btn,
+  .contact-btn,
+  .order-now-btn {
+    border: 2px solid currentColor;
+  }
+  
+  .nav-link:hover,
+  .mobile-nav-link:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+
+@media print {
+  .header,
+  .mobile-menu,
+  .whatsapp-float,
+  .modal,
+  .btn,
+  .contact-btn {
+    display: none !important;
+  }
+  
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  .product-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* ===== RESPONSIVE IMPROVEMENTS ===== */
+
+/* Better spacing on small screens */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .products-grid {
+    gap: 1rem;
+  }
+  
+  .product-card {
+    border-radius: 0.375rem;
+  }
+}
+
+/* Better touch targets on tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nav-link {
+    padding: 12px 20px;
+  }
+}
+
+/* ===== LOADING STATE ===== */
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  grid-column: 1 / -1;
+}
+
+.loading::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--bg-gray);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+/* Visually hidden but accessible to screen readers */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Text utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Spacing utilities */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
