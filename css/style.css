@@ -335,9 +335,33 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== HERO SECTION ===== */
 .hero {
-  background: linear-gradient(135deg, #e53935 0%, #ff5722 100%);
-  color: var(--white);
-  padding: var(--section-padding-lg) 0;
+  background-image: url('../images/Cover/allcv.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  height: 60vh; /* Adjust as needed */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional: Dark overlay for better text contrast */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Light dark overlay */
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
   text-align: center;
 }
 
@@ -347,16 +371,92 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-title {
+  color: white;
   font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 1rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
   margin-bottom: 2rem;
-  opacity: 0.95;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 400px;
+    height: 50vh;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-primary {
+    padding: 12px 35px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 350px;
+    height: 45vh;
+    background-position: center center;
+  }
+
+  .hero .container {
+    padding: 0 15px;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    padding: 0 10px;
+  }
+
+  .btn-primary {
+    padding: 12px 30px;
+    font-size: 0.9rem;
+    width: auto;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+  .hero {
+    min-height: 300px;
+  }
+
+  .hero-title {
+    font-size: 1.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .btn-primary {
+    padding: 10px 25px;
+    font-size: 0.85rem;
+  }
 }
 
 /* ===== BUTTONS ===== */
@@ -388,7 +488,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary {
   background-color: var(--white);
-  color: var(--primary-color);
+  color: var(--text-dark);
 }
 
 .btn-primary:hover {
