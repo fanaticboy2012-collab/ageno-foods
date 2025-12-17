@@ -7,12 +7,9 @@ const products = [
     price: 210,
     originalPrice: null,
     weight: "380gm",
-    image: "/images/products/MangoPickle.JPG",
+    image: "/images/products/MangoPickle.webp",
     shelfLife: "6 months",
     storage: "Store in cool, dry place",
-    vegan: true,
-    glutenFree: true,
-    featured: true
   },
   {
     id: 2,
@@ -21,12 +18,9 @@ const products = [
     price: 170,
     originalPrice: null,
     weight: "350gm",
-    image: "/images/products/RadishPickle.JPG",
+    image: "/images/products/RadishPickle.webp",
     shelfLife: "4 months",
     storage: "Refrigerate after opening",
-    vegan: true,
-    glutenFree: true,
-    featured: false
   },
   {
     id: 3,
@@ -35,13 +29,9 @@ const products = [
     price: 700,
     originalPrice: null,
     weight: "350gm",
-    image: "/images/products/ChickenPickle.JPG",
+    image: "/images/products/ChickenPickle.webp",
     shelfLife: "3 months (refrigerated)",
     storage: "Keep refrigerated",
-    vegan: false,
-    glutenFree: true,
-    featured: true,
-    spicyLevel: "Medium-Hot"
   },
   {
     id: 4,
@@ -50,13 +40,9 @@ const products = [
     price: 160,
     originalPrice: null,
     weight: "150gm",
-    image: "/images/products/DryFish.JPG",
+    image: "/images/products/DryFish.webp",
     shelfLife: "5 months",
     storage: "Store in airtight container in cool place",
-    vegan: false,
-    glutenFree: true,
-    featured: false,
-    spicyLevel: "Hot"
   },
   {
     id: 5,
@@ -65,13 +51,9 @@ const products = [
     price: 320,
     originalPrice: null,
     weight: "320gm",
-    image: "/images/products/akbare.jpg",
+    image: "/images/products/akbare.webp",
     shelfLife: "8 months",
     storage: "Store in cool, dry place",
-    vegan: true,
-    glutenFree: true,
-    featured: false,
-    spicyLevel: "Very Hot"
   },
   {
     id: 6,
@@ -80,13 +62,9 @@ const products = [
     price: 145,
     originalPrice: null,
     weight: "100gm",
-    image: "/images/products/timbur.jpg",
+    image: "/images/products/timbur.webp",
     shelfLife: "3 months",
     storage: "Refrigerate after opening",
-    vegan: true,
-    glutenFree: true,
-    featured: true,
-    spicyLevel: "Medium"
   },
   {
     id: 7,
@@ -95,13 +73,9 @@ const products = [
     price: 225,
     originalPrice: null,
     weight: "350gm",
-    image: "/images/products/SzechuanSauce.JPG",
+    image: "/images/products/SzechuanSauce.webp",
     shelfLife: "6 months",
     storage: "Refrigerate after opening",
-    vegan: true,
-    glutenFree: false,
-    featured: false,
-    spicyLevel: "Hot"
   }
 ];
 
